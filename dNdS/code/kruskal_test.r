@@ -1,6 +1,0 @@
-raw <- read.table("/home/j/dnds_panclass_table.csv", header = T, sep = ",")
-install.packages('dunn.test')
-library(dunn.test)
-library(ggplot2)
-kruskal_test <- kruskal.test(omega ~ Classification, data = na.omit(raw))
-dunn_result <- dunn.test(na.omit(raw$omega), na.omit(raw$Classification), method = "bonferroni")
